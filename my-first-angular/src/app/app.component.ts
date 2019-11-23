@@ -15,4 +15,5 @@ import { Component } from '@angular/core';
   `] // this is for inline styling
 })
 export class AppComponent {
+  myId = "testId";
 }

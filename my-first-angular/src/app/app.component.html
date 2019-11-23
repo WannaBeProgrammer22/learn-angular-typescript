@@ -1,6 +1,12 @@
 <div class="container">
   <div class="row">
     <div class="col-xs-12">
+      <input [id]="myId" type="text" value="test" id="wow">
+      <input id="{{myId}}" type="text" value="test" id="wow">
+
+      <input type="text" disabled="false">
+      <input type="text" [disabled]="false">
+
       <h3>I am in the AppComponent</h3>
 
       <hr>
