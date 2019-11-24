@@ -6,7 +6,9 @@ import { Component } from '@angular/core';
 @Component({
   selector: 'app-server', // must be unique 
   templateUrl: './server.component.html', // this external file must be created at the same folder, it must be a relative path
-
+  styles: [`
+    .online { color:white; }
+  `]
   // to use this component go to the app.module.ts to import it there this server component class
 })
 
@@ -14,7 +16,17 @@ export class ServerComponent {
   serverId: number = 10;
   serverStatus: string = 'offline';
 
+  constructor() {
+    this.serverStatus = Math.random() > 0.5 ? 'online' : 'offline';
+  }
+
+
+  getColor() {
+    return (this.serverStatus === 'online') ? 'green' : 'red';
+  }
+
   getServerStatus() {
     return this.serverStatus;
   }
+
 }

@@ -17,6 +17,19 @@
 
       <app-warning-alert></app-warning-alert>
       <app-success-alert></app-success-alert>
+
+      <hr>
+
+      <label>Username</label>
+      <input type="text" class="form-control" [(ngModel)]="username">
+      <p>{{ username }}</p>
+      <button class="btn btn-primary" [disabled]="username === ''" (click)="resetUsername()">Reset username</button>
+
+      <hr>
+
+      <div *ngFor="let character of sampleArray; let i = index">
+        {{ character }} has index of {{i}}
+      </div>
     </div>
   </div>
 </div>

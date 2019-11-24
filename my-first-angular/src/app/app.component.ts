@@ -16,4 +16,10 @@ import { Component } from '@angular/core';
 })
 export class AppComponent {
   myId = "testId";
+  username = '';
+  sampleArray = ['Mario', 'Luigi', 'Yoshi'];
+
+  resetUsername() {
+    this.username = ''
+  }
 }
